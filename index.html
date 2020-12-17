@@ -20,6 +20,16 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            transition: 0.3s;
+        }
+        #AppleDark:hover{
+            transform: rotate(2deg) translate(-50%, -50%);
+            transition: 0.3s;
+        }
+        #AppleDark:hover #Eaten{
+            top: 40%;
+            left: 105%;         
+            transition: 0.1s;   
         }
         #AppleLight{
             background-color: hsl(9, 91%, 55%);
@@ -30,7 +40,7 @@
             top: 50%;
             left: 60%;
             transform: translate(-50%, -50%);
-        } 
+        }
         #Stem{
             background-color: rgb(117, 156, 38);
             height: 10vh;
@@ -81,6 +91,21 @@
             left: 55%;
             transform: translate(-50%, -50%);
         }
+        #Eaten{
+            height: 200px;
+            width: 200px;
+            background-color: #1a1a1a;
+            border-radius: 50%;
+            position: absolute;
+            top: 40%;
+            left: 1000%;
+            transform: translate(-50%, -50%);
+            transition: 0.3s;
+        }
+        #Eaten:hover{
+            height:75px;
+            width: 75px;
+        }
     </style>
 </head>
 <body bgcolor="#1a1a1a">
@@ -89,6 +114,7 @@
         <div id="Leaf2"><div id="Leaf2Light"></div></div>
         <div id="Stem"></div>
         <div id="AppleLight"></div>
+        <div id="Eaten"></div>
     </div>
 </body>
 </html>
