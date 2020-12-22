@@ -5,11 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple Lol</title>
     <script>
-
+        function switchTheme() {
+    var x = document.getElementById("DarkTheme");
+    var body = document.getElementById("Body");
+    var eaten = document.getElementById("Eaten");
+    if (body.style.backgroundColor=="white") {
+        body.style.backgroundColor="#1a1a1a"
+        x.style.backgroundColor="#424242"
+        eaten.style.backgroundColor="#1a1a1a"
+        x.value="Light Theme"
+    } else {
+        body.style.backgroundColor="white"
+        x.style.backgroundColor="gray"
+        eaten.style.backgroundColor="white"
+        x.value="Dark Theme"
+    }
+}
     </script>
+    <link rel="stylesheet" href="Apple.css">
     <style>
-        body{
+                body{
             overflow: hidden;
+            background-color: #1a1a1a;
         }
         #AppleDark{
             background-color: rgb(252, 51, 16);
@@ -102,13 +119,27 @@
             transform: translate(-50%, -50%);
             transition: 0.3s;
         }
-        #Eaten:hover{
-            height:75px;
-            width: 75px;
+        #DarkTheme{
+            height: 45px;
+            width: 100px;
+            background-color: #424242;
+            border-radius: 15px;
+            position: absolute;
+            border: none;
+            top: 90%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            transition: 0.3s;
+            color: whitesmoke;
+            text-align: center;
+        }
+        #DarkTheme:hover{
+            color:#1a1a1a;    
+            font-weight: 900;      
         }
     </style>
 </head>
-<body bgcolor="#1a1a1a">
+<body id="Body">
     <div id="AppleDark">
         <div id="Leaf1"><div id="Leaf1Light"></div></div>
         <div id="Leaf2"><div id="Leaf2Light"></div></div>
@@ -116,5 +147,6 @@
         <div id="AppleLight"></div>
         <div id="Eaten"></div>
     </div>
+    <input id="DarkTheme" onclick="switchTheme()" type="button" value="Light Theme">
 </body>
 </html>
